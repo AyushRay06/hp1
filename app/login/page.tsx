@@ -1,4 +1,4 @@
-import { login } from "@/action"
+import { login, loginGithub, loginGoogle } from "@/action"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -27,21 +27,25 @@ const Login = () => {
               name="password"
             />
           </div>
-          <div className="space-y-2 mt-2 font-semibold">
-            <button type="submit" className="w-full">
-              Login
-            </button>
+        </form>
+        <div className="space-y-2 mt-2 font-semibold">
+          <button type="submit" className="w-full">
+            Login
+          </button>
+          <form action={loginGoogle}>
             <button type="submit" className="w-full flex bg-slate-300 p-2">
               Login with <IconBrandGoogle />
             </button>
+          </form>
+          <form action={loginGithub}>
             <button type="submit" className="w-full flex bg-slate-300 p-2">
               Login with <IconBrandGithub />
             </button>
-          </div>
-          <div className="text-center mt-4">
-            <Link href="/register">Don't have an account? Register</Link>
-          </div>
-        </form>
+          </form>
+        </div>
+        <div className="text-center mt-4">
+          <Link href="/register">Don't have an account? Register</Link>
+        </div>
       </div>
     </div>
   )

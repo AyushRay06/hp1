@@ -7,6 +7,14 @@ import { hash } from "bcryptjs"
 import { CredentialsSignin } from "next-auth"
 import { signIn } from "@/auth"
 
+const loginGithub = async () => {
+  await signIn("github")
+}
+
+const loginGoogle = async () => {
+  await signIn("google")
+}
+
 const login = async (formData: FormData) => {
   const email = formData.get("email") as string
   const password = formData.get("password") as string
@@ -64,4 +72,4 @@ const register = async (formData: FormData) => {
   redirect("/login")
 }
 
-export { register, login }
+export { register, login, loginGithub, loginGoogle }
