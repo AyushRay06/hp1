@@ -45,11 +45,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           lastName: user.lastName,
           email: user.email,
           role: user.role,
-          is: user._id,
+          id: user._id,
         }
 
         return userData
       },
     }),
   ],
+
+  pages:{
+    signIn:"/login"
+  }
 })

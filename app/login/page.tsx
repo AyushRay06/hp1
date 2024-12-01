@@ -1,3 +1,4 @@
+import { login } from "@/action"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -8,7 +9,7 @@ const Login = () => {
   return (
     <div className="flex h-screen items-center justify-center ">
       <div className="border border-black/60 rounded-lg p-10">
-        <form>
+        <form action={login}>
           <h3 className="text-center">Welcomback </h3>
           <div>
             <Label htmlFor="email">Email</Label>
