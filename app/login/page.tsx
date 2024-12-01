@@ -1,11 +1,14 @@
 import { login, loginGithub, loginGoogle } from "@/action"
+import { auth } from "@/auth"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react"
 import Link from "next/link"
 
-const Login = () => {
+const Login = async () => {
+  const session = await auth()
+  console.log("********", session)
   return (
     <div className="flex h-screen items-center justify-center ">
       <div className="border border-black/60 rounded-lg p-10">
