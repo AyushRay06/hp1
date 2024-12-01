@@ -28,19 +28,22 @@ const Login = () => {
             />
           </div>
         </form>
+        {/* Email */}
         <div className="space-y-2 mt-2 font-semibold">
-          <button type="submit" className="w-full">
+          <Button type="submit" className="w-full">
             Login
-          </button>
+          </Button>
+          {/* //Google  */}
           <form action={loginGoogle}>
-            <button type="submit" className="w-full flex bg-slate-300 p-2">
+            <Button type="submit" className="w-full ">
               Login with <IconBrandGoogle />
-            </button>
+            </Button>
           </form>
+          {/* Github */}
           <form action={loginGithub}>
-            <button type="submit" className="w-full flex bg-slate-300 p-2">
+            <Button type="submit" className="w-full ">
               Login with <IconBrandGithub />
-            </button>
+            </Button>
           </form>
         </div>
         <div className="text-center mt-4">
