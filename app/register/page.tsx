@@ -1,3 +1,4 @@
+import { register } from "@/action"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -10,7 +11,7 @@ const Register = async () => {
         <h3 className="font-bold text-2xl">Welcome to our App.</h3>
         <p>Register to use our app.</p>
       </div>
-      <form>
+      <form action={register}>
         <div>
           <Label htmlFor="firstname">First Name</Label>
           <Input
